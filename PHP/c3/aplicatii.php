@@ -145,7 +145,6 @@
 
 //-----------------AP11-------------------------
 
-
     // $x = 0;
 
     // while($x < 15){
@@ -163,6 +162,44 @@
     //     echo $i . "<br>";
     // }
 
+//-------------AP12--------------------
 
+    // for($i=1; $i<=15; $i++){
+    //     if($i % 2 == 0){
+    //         continue;
+    //     }else{
+    //         echo $i . "<br>";
+    //     }
+    // }
+
+//---------------AP13------------------
+
+    // $cantitateRezervor = 15;
+
+    // if($cantitateRezervor >= 1 && $cantitateRezervor < 15){
+    //     echo 'Va rog sa alimentati!';
+    // }elseif($cantitateRezervor < 1){
+    //     echo 'Ati ramas fara combustibil. Trebuie sa ne oprim!';
+    // }else{
+    //     echo 'Aveti suficient combustibil.';
+    // }
+
+//--------------AP14-------------------
+
+    $array1= array(64,3,53,12,623, 12, 51,66, 632, 86);
+
+    for($i=0; $i < 10; $i++){
+
+        $var =$array1[$i]; //pun intr-o variabila rezultatul sirului pt fiecare iteratie
+        $j = $i - 1; //pregatesc iteratia antecedenta cu care o voi compara
+
+        //In timp ce iteratia anterioara incepe de la 0 (prima iteratie din bucla while e nula) SI valoarea iteratiei anterioare este mai mare decat valoarea iteratiei prezente, atunci...  
+        while($j>=0 && $array1[$j]>$var ){
+            $array1[$j+1] = $array1[$j];  //...iteratia prezenta devine iteratia anterioara...
+            $j = $j-1; //...si apoi iteratia anterioara devine anterioara 2x 
+        }
+        $array1[$j+1] = $var; //iteratia prezenta se stocheaza in var
+    }
+    print_r($array1); //printeaza array-ul procesat
 
 ?>
