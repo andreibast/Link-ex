@@ -186,20 +186,81 @@
 
 //--------------AP14-------------------
 
-    $array1= array(64,3,53,12,623, 12, 51,66, 632, 86);
+    // $array1= array(64,3,53,12,623, 12, 51,66, 632, 86);
 
-    for($i=0; $i < 10; $i++){
+    // for($i=0; $i < 10; $i++){
 
-        $var =$array1[$i]; //pun intr-o variabila rezultatul sirului pt fiecare iteratie
-        $j = $i - 1; //pregatesc iteratia antecedenta cu care o voi compara
+    //     $var =$array1[$i]; //pun intr-o variabila rezultatul sirului pt fiecare iteratie
+    //     $j = $i - 1; //pregatesc iteratia antecedenta cu care o voi compara
 
-        //In timp ce iteratia anterioara incepe de la 0 (prima iteratie din bucla while e nula) SI valoarea iteratiei anterioare este mai mare decat valoarea iteratiei prezente, atunci...  
-        while($j>=0 && $array1[$j]>$var ){
-            $array1[$j+1] = $array1[$j];  //...iteratia prezenta devine iteratia anterioara...
-            $j = $j-1; //...si apoi iteratia anterioara devine anterioara 2x 
+    //     //In timp ce iteratia anterioara incepe de la 0 (prima iteratie din bucla while e nula) SI valoarea iteratiei anterioare este mai mare decat valoarea iteratiei prezente, atunci...  
+    //     while($j>=0 && $array1[$j]>$var ){
+    //         $array1[$j+1] = $array1[$j];  //...iteratia prezenta devine iteratia anterioara...
+    //         $j = $j-1; //...si apoi iteratia anterioara devine anterioara 2x 
+    //     }
+    //     $array1[$j+1] = $var; //iteratia prezenta se stocheaza in var
+    // }
+    // print_r($array1); //printeaza array-ul procesat
+
+//-----------------AP15------------------
+
+    // $a = 5;
+    // $b = 7;
+
+    // $temp = $a;
+    // $a = $b;
+    // $b = &$temp;
+
+
+    // echo $a. "<br>";
+    // echo $b;
+
+//-----------------AP16---------------------
+
+    // //produsul 1
+    // $x1 = 34;
+    // $x2 = 38;
+
+    // //produsul 2
+    // $y1 = 57;
+    // $y2 = 60;
+
+    // print(($x2 -$x1) + ($y2-$y1));
+
+//----------------AP19---------------------
+
+    // $sold =2500;
+    // $dobanda = 11;
+    // $nrAni = 8;
+
+    // $rezultat = $sold;
+
+    // for($i = 1; $i <= $nrAni; $i++){
+    //     echo "Soldul in anul $i este: " . $rezultat . " lei" . "<br>";
+    //     $rezultat += ($rezultat * ($dobanda/100));
+    // }
+
+//-----------------AP20--------------------
+
+    $baza2= "101101";
+    $b2_convertit = str_split($baza2);
+    $contor = 0;
+    $rezultat = 0;
+    $suma = 0;
+
+    for($i = 0 ; $i<strlen($baza2); $i++){
+        if(is_numeric($b2_convertit[$i]) && ($b2_convertit[$i] == 0 || $b2_convertit[$i] ==1) && $b2_convertit[0] == 1){
+            $array_putere[$i]= 2**$contor;
+            $rezultat = $array_putere[$i] * $b2_convertit[$i];
+            $suma += $rezultat;
+            $contor++;
+        }else{
+            echo "Numar in baza 2 inserat gresit. Verificati numarul introdus. Ex: 111010101.";
+            $suma = 0;
+        break;
         }
-        $array1[$j+1] = $var; //iteratia prezenta se stocheaza in var
     }
-    print_r($array1); //printeaza array-ul procesat
-
+    if($suma != 0){
+        echo 'Numarul in baza2 (' . $baza2 . ') este in baza10 = ' . $suma;
+    }
 ?>
