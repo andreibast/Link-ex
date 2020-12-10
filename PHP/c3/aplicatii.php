@@ -227,6 +227,65 @@
 
     // print(($x2 -$x1) + ($y2-$y1));
 
+//----------------AP17---------------------
+
+// $nrConcurenti = range(1,100);
+// $echipa;
+
+// $j=0;
+// for($i=0; $i<=(100/6); $i++){
+//     if(isset($nrConcurenti[$j+4])){
+//         $echipa[$i] = [
+//             "$i" => array($nrConcurenti[$j], $nrConcurenti[$j+1], $nrConcurenti[$j+2], $nrConcurenti[$j+3], $nrConcurenti[$j+4], $nrConcurenti[$j+5])
+//         ];
+//         $j+=6;
+//     }else{
+//         $echipa[$i] = [
+//             "$i" => array($nrConcurenti[$j], $nrConcurenti[$j+1], $nrConcurenti[$j+2], $nrConcurenti[$j+3])
+//         ];
+//         $j+=6;
+//     }
+// }
+
+// //Cod de verificare
+//     // echo "<pre>";
+//     // print_r($echipa);
+//     //echo "<hr>";
+
+// //Gruparea echipelor
+// echo "<b>Echipele sunt grupate astfel: </b>" . "<br>" . "<br>";
+
+// for($a=0; $a<=16; $a++){
+//     echo "Echipa " . ($a+1) . " are concurentii: ";
+//     for($b=0; $b<=5; $b++){
+//         if(isset($echipa[$a][$a][$b])){
+//             print_r( $echipa[$a][$a][$b] . "; ");
+//         }else{
+//             continue;
+//         }
+//     }
+//     echo "<br>";
+// }
+
+// //Aranjarea startului
+// echo "<br>";
+// echo "<b>Startul va avea loc in aceasta ordine: </b>" . "<br>" . "<br>";
+
+// for($p=0; $p<=5;$p++){
+//     echo "Startul nr.". ($p+1) ." are concurentii: ";
+//     for($k=0; $k<=15; $k++){
+//         print_r($echipa[$k][$k][$p]);
+//         echo "; ";
+//     }
+//     echo "<br>";
+// }
+
+// echo "Startul nr.7 are concurentii: ";
+// for($l=0; $l<=3; $l++){
+//     print_r($echipa[16][16][$l]);
+//     echo "; ";
+// }
+
 //----------------AP19---------------------
 
     // $sold =2500;
@@ -242,25 +301,25 @@
 
 //-----------------AP20--------------------
 
-    $baza2= "101101";
-    $b2_convertit = str_split($baza2);
-    $contor = 0;
-    $rezultat = 0;
-    $suma = 0;
+    // $baza2= "101101";
+    // $b2_convertit = str_split($baza2);
+    // $contor = 0;
+    // $rezultat = 0;
+    // $suma = 0;
 
-    for($i = 0 ; $i<strlen($baza2); $i++){
-        if(is_numeric($b2_convertit[$i]) && ($b2_convertit[$i] == 0 || $b2_convertit[$i] ==1) && $b2_convertit[0] == 1){
-            $array_putere[$i]= 2**$contor;
-            $rezultat = $array_putere[$i] * $b2_convertit[$i];
-            $suma += $rezultat;
-            $contor++;
-        }else{
-            echo "Numar in baza 2 inserat gresit. Verificati numarul introdus. Ex: 111010101.";
-            $suma = 0;
-        break;
-        }
-    }
-    if($suma != 0){
-        echo 'Numarul in baza2 (' . $baza2 . ') este in baza10 = ' . $suma;
-    }
+    // for($i = 0 ; $i<strlen($baza2); $i++){
+    //     if(is_numeric($b2_convertit[$i]) && ($b2_convertit[$i] == 0 || $b2_convertit[$i] ==1) && $b2_convertit[0] == 1){
+    //         $array_putere[$i]= 2**$contor;
+    //         $rezultat = $array_putere[$i] * $b2_convertit[$i];
+    //         $suma += $rezultat;
+    //         $contor++;
+    //     }else{
+    //         echo "Numar in baza 2 inserat gresit. Verificati numarul introdus. Ex: 111010101.";
+    //         $suma = 0;
+    //     break;
+    //     }
+    // }
+    // if($suma != 0){
+    //     echo 'Numarul in baza2 (' . $baza2 . ') este in baza10 = ' . $suma;
+    // }
 ?>
