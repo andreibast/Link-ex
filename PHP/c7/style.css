@@ -1,0 +1,78 @@
+*{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    margin: 0 auto;
+    width: 400px;
+    margin-top: 12vh;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+hr{
+    border-bottom: #0d6efd solid 2px;
+    margin-bottom: 30px;
+}
+
+.nume, .prenume, .nasterii, .email, .parola, .telefon, .picture, .textarea  {
+    display:inline-block;
+    font-size: 12px;
+    width: 400px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+#nume, #prenume, #dataNasterii, #email, #parola, #telefon, #picture, #textarea {
+    float: right;
+    font-size: 20px;
+    width: 63%;
+    height: 35px;
+    border-color: rgba(245, 250, 237, 0.2);
+    box-shadow: 3px 3px 0 0 rgba(230, 230, 230, 0.5);
+    margin-right: 7%;
+    border-radius: 2px;
+}
+
+p{
+    float: right;
+    margin-right: 30px;
+    font-size: 10px;
+}
+
+
+
+label>strong{
+    display: inline-block;
+    margin: 12px 30px 0 0;
+}
+
+.textarea{
+    margin-bottom: 30px;
+}
+
+#checkbox{
+    margin-left: 26%;
+    margin-bottom: 60px;
+}
+
+a{
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+
+/* Buton inregistrare */
+.submit>input{
+   margin-left: 20%;
+   padding: 20px 40px;
+   background-color:#0d6efd;
+   border-radius: 5px;
+   border: none;
+   color: white;
+   font-weight: bold;
+}
