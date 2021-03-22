@@ -23,12 +23,15 @@
             $fetchedLink = $resultedRows['picture'];
             $fetchedFileName = basename($fetchedLink);
             
-            clearstatcache();
+            clearstatcache(); //CACHE HAS BEEN CLEARED
 
             if ($moveUploaded) {
-                $this->picture_message = "<br>The new cover picture has been submitted successfully!<br> $fileExists";
+                $this->picture_message = "<br>The new cover picture has been submitted successfully!" . $fetchedLink;
                 $this->alert_update_color = 'success';
-            }elseif(str_contains($fetchedLink, 'user_books_covers') && file_exists($fetchedLink)){
+            }elseif(str_contains($fetchedLink, 'user_books_covers') && file_exists($fetchedLink)){ //FILE_EXISTS GIVES FALSE NEGATIVE!
+
+                clearstatcache(); //CACHE HAS BEEN CLEARED
+
                 $updatePathLink = $fetchedLink;
                 $this->picture_message = "<br>The text has been updated!elseif1<br>" . $fetchedLink;
                 $this->alert_update_color = 'success';
